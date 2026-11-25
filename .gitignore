@@ -1,0 +1,28 @@
+# Environment variables & secrets (NEVER commit)
+.env
+.env.*
+!.env.example
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+
+# Dependencies & builds
+node_modules/
+frontend/node_modules/
+frontend/dist/
+.vercel/
+.netlify/
+
+# Python / Sandbox artifacts
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# Supabase local temp
+supabase/.temp/
+
+# OS & editor files
+.DS_Store
+Thumbs.db

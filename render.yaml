@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: paper2prototype-sandbox
+    runtime: docker
+    rootDir: sandbox-runner
+    dockerfilePath: ./Dockerfile
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: SANDBOX_API_KEY
+        generateValue: true
