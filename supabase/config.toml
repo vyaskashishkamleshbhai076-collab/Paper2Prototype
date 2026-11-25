@@ -1,0 +1,40 @@
+project_id = "paper2prototype"
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public", "storage"]
+max_rows = 1000
+
+[db]
+port = 54322
+major_version = 15
+
+[storage]
+enabled = true
+file_size_limit = "50MiB"
+
+[auth]
+enabled = true
+site_url = "http://localhost:5173"
+additional_redirect_urls = ["http://localhost:5173/auth", "http://localhost:5173/reset-password"]
+jwt_expiry = 3600
+enable_signup = true
+
+[functions.analyze-paper]
+verify_jwt = true
+
+[functions.generate-blueprint]
+verify_jwt = true
+
+[functions.recommend-resources]
+verify_jwt = true
+
+[functions.generate-code]
+verify_jwt = true
+
+[functions.explain-code]
+verify_jwt = true
+
+[functions.execute-experiment]
+verify_jwt = true
